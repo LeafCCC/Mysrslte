@@ -1,0 +1,51 @@
+{% extends "base.html" %}
+{% block title %}SRSLTE安全协议分析平台{% endblock %}
+{% block content %}
+<br>
+<style>
+.styled-button {
+				background-color:#25A6E1;color:#fff;font-family:'Helvetica Neue',sans-serif;
+				font-size:14px;	line-height:30px;border-radius:20px;-webkit-border-radius:20px;
+				-moz-border-radius:20px;border:0;width:120px;height:32px
+		    }
+ .select{
+   margin-top:0px;
+   outline:none;
+   border:1px solid #BBBBBB;
+   border-radius:4px;
+   position:relative;
+   width:100px;
+}
+</style>
+<br><br><br><br><br>
+<br><br><br><br><br>
+<div  sytle="width:520px" align="center">
+<form enctype="multipart/form-data" action="." method="POST">
+        {% csrf_token %}
+
+
+
+    <div class="form-group">
+
+
+    <div class="file-container" style="display:inline-block;position:relative;overflow: hidden;vertical-align:middle">
+        <button class="btn btn-success fileinput-button" type="button">请选择RRC日志文件</button>
+        <input type="file" id="jobData" name="file" onchange="loadFile(this.files[0])" style="position:absolute;top:0;left:0;font-size:34px; opacity:0">
+    </div>
+    <span id="filename" style="vertical-align: middle">未上传文件</span>
+
+<script>
+function loadFile(file){
+    $("#filename").html(file.name);
+}
+</script>
+    </div>
+<br>
+     <input type="submit" value="提交" class="btn btn-primary btn-sm"/>
+</form>
+</div>
+    <br>
+<br><br><br><br>
+<br><br><br><br>
+<br><br><br>
+{% endblock %}

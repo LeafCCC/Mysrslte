@@ -1,0 +1,59 @@
+{% extends "base.html" %}
+{% block title %}SRSLTE安全协议分析平台{% endblock %}
+{% block content %}
+<br>
+<style>
+     .btn{
+		    border-radius: 10px;
+	   		width: 120px;
+			height: 30px;
+			cursor: pointer;
+			background-color: gray;
+			font-weight:bold;
+            background: rgba(255, 255, 255, 0.7);
+	}
+</style>
+<style type="text/css">
+		.a {
+			font-family: "microsoft yahei";
+			font-weight:bold;
+		}
+		.b {
+		    color: #003D79 	;
+			font-family: "microsoft yahei";
+			font-weight:bold;
+		}
+</style>
+<br>
+<br>
+<br>
+<div  sytle="width:520px" align="center">
+        <h3 class="a">以下为RRC层日志分析结果：</h3>
+    <br>
+    <h4 class="b">ue身份标识:{{ ue_identity }}</h4>
+     <h4 class="b">加密算法:{{ eea }}</h4>
+     <h4 class="b">完整性保护算法:{{ eia }}</h4>
+    <h4 class="b">物理层处理时间:{{ PHY_time }}</h4>
+    <h4 class="b">cfo平均值:{{ mean_cfo}}</h4>
+    <h4 class="b">rsrp平均值:{{mean_rsrp}}</h4>
+    <h4 class="b">RRC连接时间:{{RRC_connect_time}}</h4>
+     <h4 class="b">RRC重配时间:{{RRC_reconfiguration_time}}</h4>
+    <h4 class="b">物理小区标识号:{{pci}}</h4>
+    <h4 class="b">频点号:{{dl_earfcn}}</h4>
+    <h4 class="b">小区id:{{cell_id}}</h4>
+
+
+
+
+
+
+<br>
+
+<br>
+    <input type="button"  value="点击返回主页" class="btn"  onclick="window.location.href=('/home')">
+</div>
+<br>
+<br><br><br><br>
+
+
+{% endblock %}

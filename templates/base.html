@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<html lang="zh-cn">  <!-- this is the annotation  -->
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{% block title %}{% endblock %}</title>
+
+    <link rel="stylesheet" href="{% static 'static/css/bootstrap.css' %}">
+</head>
+<body style="background-image: url({% static 'static/images/bg.png' %});background-size:100% 100%;" >
+    {% include "header.html" %}
+
+
+        {% block content %}
+        {% endblock %}
+
+{% include "footer.html" %}
+{% block javascript %}{% endblock %}
+</body>
+</html>

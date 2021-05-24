@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% block title %}SRSLTE安全协议分析平台{% endblock %}
+{% block content %}
+<br>
+<style>
+     .btn{
+		    border-radius: 12px;
+	   		width: 135px;
+			height: 49px;
+			cursor: pointer;
+			background-color: gray;
+			font-weight:bold;
+            background: rgba(255, 255, 255, 0.7);
+	}
+</style>
+<br>
+    {% load staticfiles %}
+<img name="plot1" src={% static "constellation/img/enb_pucch.jpg" %}>
+<img name="plot1" src={% static "constellation/img/enb_pucch2.jpg" %}>
+<img name="plot1" src={% static "constellation/img/pucch_data.jpg" %}>
+
+<br><br><br>
+<br><br>
+{% endblock %}

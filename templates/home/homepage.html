@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+{% block title %}SRSLTE安全协议分析平台{% endblock %}
+{% block content %}
+<br>
+<style>
+     .btn{
+		    border-radius: 12px;
+	   		width: 135px;
+			height: 49px;
+			cursor: pointer;
+			background-color: gray;
+			font-weight:bold;
+            background: rgba(255, 255, 255, 0.7);
+	}
+
+</style>
+<style type="text/css">
+		.a {
+			font-family: "microsoft yahei";
+			font-weight:bold;
+		}
+</style>
+<div  sytle="width:520px" align="center">
+    <br> <br> <br>
+    <h2 class="a">欢迎来到srslte安全协议分析平台，请选择您要查询的项目：</h2>
+   <br> <br>
+   <input type="button"  value="日志信息预处理" class="btn"  onclick="window.location.href=('log/')">
+   <br><br> <br>
+  <input type="button"  value="星座图绘制" class="btn" onclick="window.location.href=('plot1/')">
+    <br><br> <br>
+    <input type="button"  value="能量谱密度绘制" class="btn" onclick="window.location.href=('plot2/')">
+    <br><br> <br>
+    <input type="button"  value="整体展示" class="btn" onclick="window.location.href=('plotshow/')">
+    <br><br><br>
+    <input type="button"  value="RRC日志分析" class="btn" onclick="window.location.href=('RRCanalysis/')">
+  </div>
+<br>
+
+<br><br>
+{% endblock %}

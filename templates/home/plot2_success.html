@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+{% block title %}SRSLTE安全协议分析平台{% endblock %}
+{% block content %}
+<br>
+<style>
+.styled-button {
+				background-color:#25A6E1;color:#fff;font-family:'Helvetica Neue',sans-serif;
+				font-size:14px;	line-height:30px;border-radius:20px;-webkit-border-radius:20px;
+				-moz-border-radius:20px;border:0;width:120px;height:32px
+		    }
+ .select{
+   margin-top:0px;
+   outline:none;
+   border:1px solid #BBBBBB;
+   border-radius:4px;
+   position:relative;
+   width:100px;
+}
+</style>
+<br>
+<br>
+<br>
+<br>
+<br>
+<div  sytle="width:520px" align="center">
+    {% load staticfiles %}
+<img name="plot1" src={% static "ce/img/" %}{{ name }} >
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br><br>
+
+</div>
+{% endblock %}
